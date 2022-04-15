@@ -1,0 +1,22 @@
+puts ("\nNombre: Oscar Rodríguez")
+puts ("\nModulo 6 - Ruby")
+puts ("\nAño: 2022")
+
+puts ("\nHola, acá te muestro los grados Centigrados (°C), y su conversión en Farenheit (°F): ")
+
+file = File.open('m6.txt', 'w+')
+
+file.write("\nNombre: Oscar Rodríguez")
+file.write("\nModulo 6 - Ruby")
+file.write("\nAño: 2022")
+
+file.write("\nHola, acá te muestro los grados Centigrados (°C), y su conversión en Farenheit (°F): ")
+
+(0..127).each do |c|
+  file.write("\n#{c} °C  equivalen a  #{c * 9/5 + 32} °F")
+  puts "#{c} °C  equivalen a  #{c * 9/5 + 32} °F"
+end
+
+file = File.open('m6.txt', 'r')
+
+file.close()
